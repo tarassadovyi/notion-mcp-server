@@ -1,10 +1,12 @@
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 
 import { initProxy, ValidationError } from '../src/init-server.ts'
 
 export async function startServer(args: string[] = process.argv.slice(2)) {
-  const directory = __dirname;
+  const filename = fileURLToPath(import.meta.url)
+  const directory = path.dirname(filename)
   const specPath = path.resolve(directory, '../scripts/notion-openapi.json')
   
   const baseUrl = process.env.BASE_URL ?? undefined
