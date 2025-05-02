@@ -1,8 +1,8 @@
 import path from 'node:path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 
-import { initProxy, ValidationError } from '../src/init-server'
+import { initProxy, ValidationError } from '../src/init-server.ts'
 
 export async function startServer(args: string[] = process.argv.slice(2)) {
   const filename = fileURLToPath(import.meta.url)

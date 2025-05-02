@@ -2,8 +2,8 @@ import type { OpenAPIV3, OpenAPIV3_1 } from 'openapi-types'
 import OpenAPIClientAxios from 'openapi-client-axios'
 import type { AxiosInstance } from 'axios'
 import FormData from 'form-data'
-import fs from 'fs'
-import { isFileUploadParameter } from '../openapi/file-upload'
+import fs from 'node:fs'
+import { isFileUploadParameter } from '../openapi/file-upload.ts'
 
 export type HttpClientConfig = {
   baseUrl: string

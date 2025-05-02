@@ -20,7 +20,9 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true
   },
   "include": [ "test/**/*.ts", "scripts/**/*.ts", "src/**/*.ts"]
 }
